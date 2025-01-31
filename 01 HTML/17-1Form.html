@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- BS5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size : .9rem;
+        }
+        body{
+            padding : 0;
+            margin : 0;
+        }
+        a{
+            text-decoration: none;
+            color : black;
+        }
+
+        form{
+            width: 380px !important;
+            margin: 50px auto;
+            border: 1px solid;
+            min-width: 400px; 
+            
+        }
+        header{
+            height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <form action="/test.jsp" method="get" class="mt-5 m-0 p-0">
+        <div class="row header mb-2 bg-green">
+            <!-- 헤더 초록 -->
+        </div>
+        <div>
+            <img src="./image/티니핑.jpg" alt="이미지로고">
+        </div>
+        <div class="row title mb-2">
+            <h2 class="text-center fw-bold">회원가입</h2>
+        </div>
+        <div class="row line mb-2">
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3">아이디</label>
+            <input type="text" name="userid" class="col form-control">
+            <a href="javascript:void(0)" class="col-3 btn-primary ms-1 fs-custom-small">아이디 확인</a>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3">패스워드</label>
+            <input type="password" name="password" class="col form-control">
+            <a href="javascript:void(0)" class="col-3 btn-success ms-1 fs-6">비밀번호 확인</a>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3"></label>
+            <input type="password" name="re-password" placeholder="비밀번호 재확인" class="col form-control">
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3">이름</label>
+            <input type="text" name="username" class="col form-control">
+        </div>
+        <div class="row mb-2">
+            <label for="cal" class="col-3 form-check-label">생년월일</label>
+
+            <input type="radio" name="cal" value="1" class="col-1 p-0 me-2 form-check-input">
+            <label for="" class="col-1">양</label> 
+
+            <input type="radio" name="cal" value="0" class="col-1 p-0 me-2 form-check-input">
+            <label for="" class="col-1">음</label>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3"></label>
+            <select class="col form-select ms-2">
+                <option value="">1990</option>
+                <option value="">2024</option>
+            </select>
+            <select class="col form-select ms-2">
+                <option value="">01</option>
+                <option value="">09</option>
+            </select>
+            <select class="col form-select ms-2">
+                <option value="">14</option>
+                <option value="">08</option>
+            </select>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3">주소</label>
+            <input type="text" name="zipcode" class="col form-control">
+            <a href="javascript:void(0)" class="col-3 btn btn-primary ms-2 fs-custom-small">우편번호</a>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3"></label>
+            <input type="text" name="addr1" class="col form-control">
+        </div>
+        <div class="row mb-2">
+            <label for="" class="col-3">휴대전화</label>
+            <select name="phone1" class="col form-select me-2">
+                <option value="010">010</option>
+                <option value="011">011</option>
+            </select>
+            <input type="text" class="col form-control me-2">
+            <input type="text" class="col form-control">
+        </div>
+        <div class="row mb-2">
+            <div class="col-6 p-0 pe-1">
+                <label for=""></label>
+                <button class="col btn-secondary w-100">회원가입</button>
+            </div>
+            <div class="col-6 p-0 ps-1">
+                <label for="" class="col form-check-label"></label>
+                <button class="col btn-warning w-100">로그인</button>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <input type="checkbox" class="col-1 form-check-input">
+            <label for="" class="col form-check-label p-0">회원 가입 후 로그인 상태를 유지</label>
+        </div>
+        
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<>
+    <!-- 자식요소 선택 : '>'-->
+
+    <!-- div>ul>li -->
+     <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <!-- div>p>ul>li -->
+     <div>
+        <p>
+            <ul>
+                <li></li>
+            </ul>
+        </p>
+     </div>
+
+     <!-- 형제노드 : '+' -->
+
+      <!-- div>ul+ol -->
+       <div>
+        <ul></ul>
+        <ol></ol>
+       </div>
+       <!-- div>p>ul+ol -->
+       <div>
+        <p>
+            <ul></ul>
+            <ol></ol>
+        </p>
+       </div>
+
+    <!-- 메뉴구조 형태-->
+     <!-- div>ul>li>a+ul -->
+      <div>
+        <ul>
+            <li>
+                <a></a>
+                <ul></ul>
+            </li>
+        </ul>
+      </div>
+    <!-- 상위 태그로 이동-->
+     <!-- div>ul>li^p -->
+        <div>
+            <ul>
+                <li></li>
+            </ul>
+            <p></p>
+        </div>
+    <!-- 메뉴구조 -->
+     <!-- div>ul>li>a{MAINMENU $}>ul>li*4{SUBMENU $}-->
+     <div>
+        <ul>
+            <li>
+                <a href="">MAINMENU 1
+                    <ul>
+                        <li>SUBMENU 1</li>
+                        <li>SUBMENU 2</li>
+                        <li>SUBMENU 3</li>
+                        <li>SUBMENU 4</li>
+                    </ul>
+                </a>
+            </li>
+        </ul>
+     </div>
+     <!-- 클래스 선택자 : "."-->
+      <!-- .c1 -->
+     <div class="c1"></div>
+     <!-- ID 선택자 : "#"-->
+      <!-- #rapper -->
+      <div id="rapper"></div>
+
+      <!-- (attr) 속성 추가 -->
+       <!-- div>ol>li*4{MENU $} -->
+       <div>
+        <ol>
+            <li>MENU 1</li>
+            <li>MENU 2</li>
+            <li>MENU 3</li>
+            <li>MENU 4</li>
+        </ol>
+       </div>
+<!-- 시작번호 선택 -->
+ <!-- div>ul>li*8{TEXT $$$}-->
+<div>
+    <ol type="T" data-name="비타500">
+        <li>MENU 1</li>
+        <li>MENU 2</li>
+        <li>MENU 3</li>
+    </ol>
+</div>
+
+<!-- 문서 전체 구조 Emmet 만들기 -->
+<!--.rapper>header>.top-header+nav^main>section*3^footer -->
+<div class="rapper">
+    <header>
+        <div class="top-header"></div>
+        <nav>
+           <!--ul.main-menu>li*4>a{$_mainmenu}+ul>li*5>a{$_submemu} -->
+            <ul class="main-menu">
+                <li>
+                    <a href="">1_mainmenu</a>
+                    <ul>
+                        <li><a href="">가나다라</a></li>
+                        <li><a href="">abcd</a></li>
+                        <li><a href="">3_submemu</a></li>
+                        <li><a href="">4_submemu</a></li>
+                        <li><a href="">5_submemu</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">2_mainmenu</a>
+                    <ul>
+                        <li><a href="">1_submemu</a></li>
+                        <li><a href="">2_submemu</a></li>
+                        <li><a href="">3_submemu</a></li>
+                        <li><a href="">4_submemu</a></li>
+                        <li><a href="">5_submemu</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">3_mainmenu</a>
+                    <ul>
+                        <li><a href="">1_submemu</a></li>
+                        <li><a href="">2_submemu</a></li>
+                        <li><a href="">3_submemu</a></li>
+                        <li><a href="">4_submemu</a></li>
+                        <li><a href="">5_submemu</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">4_mainmenu</a>
+                    <ul>
+                        <li><a href="">1_submemu</a></li>
+                        <li><a href="">2_submemu</a></li>
+                        <li><a href="">3_submemu</a></li>
+                        <li><a href="">4_submemu</a></li>
+                        <li><a href="">5_submemu</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer></footer>
+</div>
+
+</body>
+</html>
