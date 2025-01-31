@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    .:root{
+        font-size: 14px
+    }
+ </style>
+    
+</head>
+<body>
+    <!-- px -->
+    <hr>
+    <div style="font-size:64px;">
+    <div style="font-size: 32px;">HELLOWORLD</div>
+    <div style="font-size: 200%;">HELLOWORLD</div>
+    <div style="font-size: 50%;">HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+    </div>
+   <hr/>
+ <!-- em : 상대크기(부모태그의 font-size를 기준) -->
+  <hr>
+  <div style="font-size: 8rem;">
+    <div style="font-size: 32px;">HELLOWORLD</div>
+    <div style="font-size: 200%;">HELLOWORLD</div>
+    <div style="font-size: 50%;">HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+  </div>
+  <hr/>
+    <!--rem : 상대크기(기본글지크기(root : 16px을 기준)) -->
+    <hr>
+    <div style="font-size: 2rem;">
+    <div style="font-size: 32px;">HELLOWORLD</div>
+    <div style="font-size: 200%;">HELLOWORLD</div>
+    <div style="font-size: 50%;">HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+    </div>
+    <hr/>
+    </div>
+     <!-- % : 상대크기(상위태그크기를 기준) -->
+      <hr>
+      <div>
+      <div style="font-size: 34px;">HELLOWORLD</div>
+      <div style="font-size: 200%;">HELLOWORLD</div>
+      <div style="font-size: 50%;">HELLOWORLD</div>
+      <div>HELLOWORLD</div>
+      </div>
+     <hr/>
+
+      <!-- vw : 상대크기(뷰포트를 기준으로) -->
+       <div style="width: 100vw;height: 200px;border: 1px solid;margin: 0 auto;">
+        <div style="text-align: center;line-height: 200px;font-size:clamp(3rem,5vw,6rem);"> 
+            HELLO WORLD
+        </div>
+       </div>
+</body>
+</html>
