@@ -12,13 +12,6 @@
         body{margin: 0;}
 
         /* layout */
-        .layout-margin-360{
-            min-width: 1280px;
-            margin: 0 360px;
-        }
-        .layout-padding-360{
-            padding: 0 360px;
-        }
         .wrapper{}
         /* header */
         .wrapper>header{}
@@ -31,8 +24,10 @@
         /* main-menu */
         .wrapper>header>nav>ul.main-menu{
             border: 1px solid cornflowerblue;
-            display: flex;
-            justify-content: space-between;
+
+            /* display: flex; */
+            /* justify-content: space-between; */
+            width: 200px;
             height: 100%;
            
         }
@@ -42,7 +37,6 @@
             height: 100%;
             line-height: 50px;
             text-align: center;
-
             position: relative;
         }
         .wrapper>header>nav>ul.main-menu>li>a{
@@ -54,8 +48,8 @@
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
             background-color: aquamarine;
             position: absolute;
-            left: 0;
-            top: 50px;
+            left: 200px;
+            top: 0;
             width: 100%;
 
             display: none;
@@ -67,9 +61,8 @@
             background-color: tomato;
             display: block;
         }
-
         /* hover event */
-        .wrapper>header>nav>ul.main-menu:hover .sub-menu{
+        .wrapper>header>nav>ul.main-menu>li:hover>ul.sub-menu{
             display: block;
         }
 
@@ -81,7 +74,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header"></div>
-            <nav class="layout-margin-360">
+            <nav>
                 <ul class="main-menu">
                     <li>
                         <a href="javascript:void(0)">1_mainmenu</a>
