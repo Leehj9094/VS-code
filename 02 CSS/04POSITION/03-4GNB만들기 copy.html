@@ -7,126 +7,127 @@
     <style>
         *{box-sizing: border-box;}
         /* common */
-        a{text-decoration: none; color: black; }
-        ul{list-style: none; margin: 0;padding: 0;}
-        body{margin: 0;}
+        a{ text-decoration: none;color:black;}
+        ul{list-style: none;margin:0;padding :0;}
+        body{margin :0;}
 
         /* layout */
-        .layout-margin-360{
-            min-width: 1280px;
-            margin: 0 360px;
-        }
-        .layout-padding-360{
-            padding: 0 360px;
-        }
         .wrapper{}
         /* header */
         .wrapper>header{}
-        .wrapper>header>.top-header{}
-
-        .wrapper>header>nav{
-            height: 50px;
+        .wrapper>header>.top-header{
+            border-top: 1px solid peru;
+            border-bottom: 1px solid peru;
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            font-size: 35px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
         }
-
+        
+        .wrapper>header>nav{
+            height:50px;
+        }
         /* main-menu */
         .wrapper>header>nav>ul.main-menu{
-            border: 1px solid cornflowerblue;
-            /* display: flex;
-            justify-content: space-between; */
-            width: 100%;
-            height: 100%;
-
-           
-        }
-        .wrapper>header>nav>ul.main-menu>li{
-            border: 1px solid green;
-            width: 100%;
-            height: 100%;
-            line-height: 50px;
-            text-align: center;
+            
+             display:flex; 
+            justify-content: space-between;
+            height:100%;
             
         }
+        .wrapper>header>nav>ul.main-menu>li{
+            position: relative;
+            display: flex;
+            height:100%;
+            width: 100%;
+            line-height: 50px;
+            text-align:center;
+            justify-content: center;
+            align-items: center;   
+        }
         .wrapper>header>nav>ul.main-menu>li>a{
-            background-color: darkslategray;
-            display: block;
+             position: relative;
+            display:flex;
+            align-items: center; 
         }
 
         /* sub-menu */
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
-            background-color: aquamarine;
             position: absolute;
-            width: 100%;
-            left: 0;
-            top: 0;
-
-
-            
+            top: 50px;
+     
+            display: none;
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
-            border: 1px solid goldenrod;
+            border-top: 1px solid lightsalmon;
+            font-size: 15px;
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a{
-            background-color: tomato;
             display: block;
         }
-
+        
         /* hover event */
         .wrapper>header>nav>ul.main-menu>li:hover>ul.sub-menu{
-            display: block;
+            display:block;
         }
 
+        /* main  */
+        .wrapper>main{}
+        .wrapper>main>section{}
         /* footer */
         .wrapper>footer{}
     </style>
 </head>
 <body>
+    
     <div class="wrapper">
         <header>
-            <div class="top-header"></div>
-            <nav class="layout-margin-360">
+            <div class="top-header"><p>폴리파크</p></div>
+            <nav>
                 <ul class="main-menu">
                     <li>
-                        <a href="javascript:void(0)">1_mainmenu</a>
+                        <a href="javascript:void(0)">강아지사료</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">브랜드별</a></li>
+                            <li><a href="javascript:void(0)">연령별</a></li>
+                            <li><a href="javascript:void(0)">임박할인</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">2_mainmenu</a>
+                        <a href="javascript:void(0)">실내용품</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">하우스</a></li>
+                            <li><a href="javascript:void(0)">쿠션</a></li>
+                            <li><a href="javascript:void(0)">스텝</a></li>
+                            <li><a href="javascript:void(0)">철장/울타리</a></li>
+                            <li><a href="javascript:void(0)">식기</a></li>
+                            <li><a href="javascript:void(0)">급수기</a></li>
+                            <li><a href="javascript:void(0)">힐링/케어</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">3_mainmenu</a>
+                        <a href="javascript:void(0)">패션</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">긴소매</a></li>
+                            <li><a href="javascript:void(0)">민소매</a></li>
+                            <li><a href="javascript:void(0)">아우터</a></li>
+                            <li><a href="javascript:void(0)">올인원</a></li>
+                            <li><a href="javascript:void(0)">원피스</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">4_mainmenu</a>
+                        <a href="javascript:void(0)">목욕/미용</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">샴푸</a></li>
+                            <li><a href="javascript:void(0)">브러쉬</a></li>
+                            <li><a href="javascript:void(0)">보습/미스트</a></li>
+                            <li><a href="javascript:void(0)">미용가위</a></li>
                         </ul>
                     </li>
                 </ul>
-
 
             </nav>
         </header>
@@ -135,6 +136,5 @@
         </main>
         <footer></footer>
     </div>
-    
 </body>
 </html>

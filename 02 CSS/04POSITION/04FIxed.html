@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  */
+        *{box-sizing: border-box;}
+        /*  */
+        a{text-decoration: none;color: black;}
+        ul{list-style: none;margin: 0;padding: 0;}
+        body{
+            height: 4000px;
+            margin: 0;
+        }
+        /* layout */
+        .layout-padding-rem{
+            padding: 0 20px;
+        }
+        .layout-width-1280{
+
+            margin: 0 auto;
+        }
+        
+        .layout-fixed-nav{
+            position: fixed;
+            left: 0;right: 0;
+            margin: auto;
+            z-index: 100;
+            border: 5px solid black;
+        }
+        .wrapper{}
+        /* header */
+        .wrapper>header{}
+        .wrapper>header>.top-header{}
+
+        /* main */
+        .wrapper>header>nav{
+            height: 50px;
+            background-color: chartreuse;
+           
+        }
+
+        /* main menu */
+        .wrapper>header>nav>ul.mainmenu{
+            border: 1px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 100%;
+        }
+        .wrapper>header>nav>ul.mainmenu>li{
+            background-color: orange;
+            height: 100%;
+            line-height: 50px;
+            padding: 0 20px;
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper>header>nav>ul.mainmenu>li>a{
+            border: 1px solid white;
+            display: block;
+            
+        }
+
+        /* sub menu */
+        .wrapper>header>nav>ul.mainmenu>li>ul.submenu{
+            background-color: cornflowerblue;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            display: none;
+            top: 50px;
+            
+        }
+        .wrapper>header>nav>ul.mainmenu>li>ul.submenu>li{
+            border: 1px solid white;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .wrapper>header>nav>ul.mainmenu>li>ul.submenu>li>a{}
+
+        /* hover event */
+        .wrapper>header>nav>ul.mainmenu>li:hover>ul.submenu{
+            display:block;
+        }
+        /* main */
+        .wrapper>main{
+            position: relative;
+            top: 50px;
+        }
+        .wrapper>main>section.section-01{height: 600px;background-color: crimson;}
+        .wrapper>main>section.section-02{height: 600px;background-color: thistle;}
+        .wrapper>main>section.section-03{height: 600px; background-color: seagreen;}
+        .wrapper>main>section.section-04{height: 600px;background-color: royalblue;}
+        
+        /* footer */
+        .wrapper>footer{}
+
+
+        /* quick menu */
+        .quickmenu{
+            width: 100px;
+            height: 100px;
+            background-color: darkslategrey;
+            
+            position: fixed;
+            left: 80vw;
+            top: 80vh;
+            z-index: 999;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav class="layout-padding-rem layout-fixed-nav">
+                <ul class="mainmenu">
+                    <li>
+                        <a href="">1_MAINMENU</a>
+                        <ul class="submenu">
+                            <li><a href="">1_SUBMENU</a></li>
+                            <li><a href="">2_SUBMENU</a></li>
+                            <li><a href="">3_SUBMENU</a></li>
+                            <li><a href="">4_SUBMENU</a></li>
+                            <li><a href="">5_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">2_MAINMENU</a>
+                        <ul class="submenu">
+                            <li><a href="">1_SUBMENU</a></li>
+                            <li><a href="">2_SUBMENU</a></li>
+                            <li><a href="">3_SUBMENU</a></li>
+                            <li><a href="">4_SUBMENU</a></li>
+                            <li><a href="">5_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">3_MAINMENU</a>
+                        <ul class="submenu">
+                            <li><a href="">1_SUBMENU</a></li>
+                            <li><a href="">2_SUBMENU</a></li>
+                            <li><a href="">3_SUBMENU</a></li>
+                            <li><a href="">4_SUBMENU</a></li>
+                            <li><a href="">5_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">4_MAINMENU</a>
+                        <ul class="submenu">
+                            <li><a href="">1_SUBMENU</a></li>
+                            <li><a href="">2_SUBMENU</a></li>
+                            <li><a href="">3_SUBMENU</a></li>
+                            <li><a href="">4_SUBMENU</a></li>
+                            <li><a href="">5_SUBMENU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="section-01"></section>
+            <section class="section-02"></section>
+            <section class="section-03"></section>
+            <section class="section-04"></section>
+        </main>
+        <footer></footer>
+
+        <div class="quickmenu">
+            <a href="javascript:void(0)">
+                😎
+            </a>
+
+        </div>
+
+    </div>
+</body>
+</html>
