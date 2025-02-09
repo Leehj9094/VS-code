@@ -1,0 +1,12 @@
+
+.wrapper{}
+.wrapper>.wrapper-top{}
+.wrapper.wrapper-top>.main{
+    position: relative;
+}
+.wrapper.wrapper-top>.main>.main-video{
+
+}
+.wrapper.wrapper-top>.main>.pay{
+   
+}
