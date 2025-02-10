@@ -1,12 +1,128 @@
 
-.wrapper{}
-.wrapper>.wrapper-top{}
-.wrapper.wrapper-top>.main{
+
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 1200px;
+    margin: 0;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.wrapper{
+    width: 1200px;
+}
+.wrapper>.wrapper-top{
+    /* width: 1200px; */
     position: relative;
 }
-.wrapper.wrapper-top>.main>.main-video{
+
+
+
+/* main */
+.wrapper>.wrapper-top>.main{
+    display: flex;
+    position: relative;
+}
+.wrapper>.wrapper-top>.main>.video{
+    border: 1px solid red;
+    width: 750px;
+    height: 421px;
+}
+.wrapper-top>.main>.price{
+    border: 1px solid yellow;
+    width: 450px;
+    height: 250px;
+    display: flex;
+
+    font-size: 20px;
+    text-align: center;
+    
+}
+.wrapper-top>.main>.price>ul:nth-child(1){
+    
+}
+.wrapper-top>.main>.price>ul:nth-child(2){
+    
 
 }
-.wrapper.wrapper-top>.main>.pay{
+.wrapper-top>.main>.price>ul:nth-child(3){
+    border-top: 1px solid CB863D;
+}
+
+
+
+/* user */
+.wrapper-top>.user{
+    border: 1px solid blue;
+    width: 450px;
+    height: 162px;
+    
+    display: flex;
+    position: relative;
+
+    font-size: 24px;
+
+}
+.wrapper-top>.user>.user-emoji{
+    width: 50px;
+    height: 49px;
+    
+}
+.wrapper-top>.user>.graph{
+    width: 120px;
+    height: 120px;
+    display: flex;
+}
+
+/* bottom-left */
+.wrapper-top>.bottom-left{
+    border: 5px solid green;
+    width: 750px;
+    height: 490px;
+    text-align: center;
    
+    display: flex;
+    position: relative;
+    
+}
+
+/* bottom - right */
+.wrapper-top>.bottom-right{
+    border: 5px solid purple;
+    width: 450px;
+    height: 239px;
+    display: flex;
+    position: relative;
+
+    visibility: hidden;
+}
+.wrapper-top>.bottom-right>.right{
+    font-size: 30px;
+}
+.wrapper-top>.bottom-right>.left{
+    width: 25px;
+    height: 50px;
+}
+.wrapper-top>.bottom-right>.bottom{
+    width: 450px;
+    height: 240px;
+    /* 슬라이더 들어갈 곳 */
+}
+
+
+/* bottom-under-right */
+.wrapper-top>.bottom-under-right{
+    border: 1px solid orchid;
+    /* width: ;
+    height: ; */
+    font-size: 30px;
+    display: flex;
+    position: relative;
 }
