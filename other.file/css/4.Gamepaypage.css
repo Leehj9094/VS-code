@@ -5,18 +5,12 @@
 }
 body{
     width: 1200px;
-    margin: 0;
+    margin: 0 auto;
+    
 }
 
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-  }
 .wrapper{
-    width: 1200px;
+    /* width: 1200px; */
 }
 .wrapper>.wrapper-top{
     /* width: 1200px; */
@@ -29,43 +23,37 @@ body{
 .wrapper>.wrapper-top>.main{
     display: flex;
     position: relative;
+    background-color: orange;
 }
 .wrapper>.wrapper-top>.main>.video{
-    border: 1px solid red;
-    width: 750px;
-    height: 421px;
+    border: 1px solid;
+    
 }
 .wrapper-top>.main>.price{
-    border: 1px solid yellow;
     width: 450px;
     height: 250px;
+}
+.wrapper-top>.main>.price>.list{
     display: flex;
-
-    font-size: 20px;
-    text-align: center;
     
 }
-.wrapper-top>.main>.price>ul:nth-child(1){
-    
+.wrapper-top>.main>.price>.btn{
+    position: absolute;
+    left: 150%;
 }
-.wrapper-top>.main>.price>ul:nth-child(2){
-    
-
-}
-.wrapper-top>.main>.price>ul:nth-child(3){
-    border-top: 1px solid CB863D;
-}
-
+.wrapper-top>.main>.price>.pay-btn{}
 
 
 /* user */
 .wrapper-top>.user{
-    border: 1px solid blue;
+    border: 1px solid;
+    background-color: blue;
     width: 450px;
     height: 162px;
     
-    display: flex;
-    position: relative;
+    position: absolute;
+    left: 62.5%;
+    bottom: 54.2%;
 
     font-size: 24px;
 
@@ -73,19 +61,85 @@ body{
 .wrapper-top>.user>.user-emoji{
     width: 50px;
     height: 49px;
+
+    font-size: 24px;
     
 }
-.wrapper-top>.user>.graph{
+.wrapper-top>.user>.chart{
     width: 120px;
     height: 120px;
     display: flex;
 }
+/* .chartWrap{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin:10px;
+  } */
+  .chart {
+    position: relative;
+    left: 70%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background:lightgray;
+    display:inline-block;
+  }
+  .chart:after{
+    content:'';
+    background: #fff;
+    position: absolute;
+    top:50%; left:50%;
+    width:70px; height:70px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .chart-bar{
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 700%;
+  }
+  
+  .chart-total{
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background:gray;
+    width:100%;
+  }
+  .chart-total span{
+    position: absolute;
+    color:#777;
+  }
+  .chart-total-num{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:1.3rem;
+    font-weight:bold;
+    color:#333;
+  }
+  
+  
+  .chart-total-text1{
+    top:-150px;right:-10px;
+  }
+  .chart-total-text2{
+    top:-50px;right:-70px;
+  }
 
 /* bottom-left */
 .wrapper-top>.bottom-left{
-    border: 5px solid green;
+    /* border: 1px solid; */
+    background-color: green;
     width: 750px;
     height: 490px;
+    
     text-align: center;
    
     display: flex;
@@ -95,34 +149,55 @@ body{
 
 /* bottom - right */
 .wrapper-top>.bottom-right{
-    border: 5px solid purple;
+    border: 1px solid ;
+    background-color: peru;
     width: 450px;
     height: 239px;
+    
+    position: absolute;
+    left: 62.5%;
+    bottom:28%;
     display: flex;
-    position: relative;
+    
+    
 
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 .wrapper-top>.bottom-right>.right{
     font-size: 30px;
+
+    
 }
 .wrapper-top>.bottom-right>.left{
     width: 25px;
     height: 50px;
+    position: absolute;
+
+
+
 }
-.wrapper-top>.bottom-right>.bottom{
+.wrapper-top>.bottom-right>.slider{
     width: 450px;
     height: 240px;
     /* 슬라이더 들어갈 곳 */
 }
+.wrapper-top>.bottom-right>.slider>.img{
+    text-align: center;
+}
 
 
 /* bottom-under-right */
-.wrapper-top>.bottom-under-right{
-    border: 1px solid orchid;
-    /* width: ;
-    height: ; */
+.wrapper-top>.bottom-right-under{
+    border: 1px solid ;
+    background-color: orchid;
+    width: 450px;
+    height: 172px;
     font-size: 30px;
-    display: flex;
-    position: relative;
+
+    position: absolute;
+    left: 62.5%;
+    bottom: .2%;
+}
+.wrapper-top>.bottom-right-under>.img{
+    text-align: center;
 }
