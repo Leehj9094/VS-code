@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../Downloads/새 폴더"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../Teacher"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VS-code"
+	}
+}

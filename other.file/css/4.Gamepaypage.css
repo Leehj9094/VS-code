@@ -32,16 +32,28 @@ body{
 .wrapper-top>.main>.price{
     width: 450px;
     height: 250px;
+    display: flex;
+
+    position: relative;
 }
 .wrapper-top>.main>.price>.list{
-    display: flex;
+    /* position: absolute;
+    justify-content: space-between;
+    align-items: center; */
+
+    font-size: 16px;
     
 }
 .wrapper-top>.main>.price>.btn{
     position: absolute;
-    left: 150%;
+    align-items: center;
+    justify-content: space-between;
 }
-.wrapper-top>.main>.price>.pay-btn{}
+.wrapper-top>.main>.price>.pay-btn{
+    display: flex;
+    align-items: center;
+    al
+}
 
 
 /* user */
@@ -51,6 +63,7 @@ body{
     width: 450px;
     height: 162px;
     
+    display: flex;
     position: absolute;
     left: 62.5%;
     bottom: 54.2%;
@@ -63,75 +76,19 @@ body{
     height: 49px;
 
     font-size: 24px;
+
+}
+/* .wrapper-top>.user>.chart{
+    width: 120px;
+    height: 120px;
     
 }
-.wrapper-top>.user>.chart{
+.wrapper-top>.user>.chart>.pie {
     width: 120px;
     height: 120px;
-    display: flex;
-}
-/* .chartWrap{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    margin:10px;
+    background-image: conic-gradient(orange 60%, blue 40%);
+    border-radius: 50%
   } */
-  .chart {
-    position: relative;
-    left: 70%;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    transition: 0.3s;
-    background:lightgray;
-    display:inline-block;
-  }
-  .chart:after{
-    content:'';
-    background: #fff;
-    position: absolute;
-    top:50%; left:50%;
-    width:70px; height:70px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .chart-bar{
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 50%;
-    left: 700%;
-  }
-  
-  .chart-total{
-    position: absolute;
-    bottom: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    background:gray;
-    width:100%;
-  }
-  .chart-total span{
-    position: absolute;
-    color:#777;
-  }
-  .chart-total-num{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size:1.3rem;
-    font-weight:bold;
-    color:#333;
-  }
-  
-  
-  .chart-total-text1{
-    top:-150px;right:-10px;
-  }
-  .chart-total-text2{
-    top:-50px;right:-70px;
-  }
 
 /* bottom-left */
 .wrapper-top>.bottom-left{
@@ -188,7 +145,7 @@ body{
 
 /* bottom-under-right */
 .wrapper-top>.bottom-right-under{
-    border: 1px solid ;
+    border-bottom: 1px solid black;
     background-color: orchid;
     width: 450px;
     height: 172px;
@@ -200,4 +157,5 @@ body{
 }
 .wrapper-top>.bottom-right-under>.img{
     text-align: center;
+    padding: 0;
 }
