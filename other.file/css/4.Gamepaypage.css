@@ -3,18 +3,41 @@
 *{
     box-sizing: border-box;
 }
+
+
 body{
-    width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    background: #181818;
+
     
 }
 
 .wrapper{
-    /* width: 1200px; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 500px 1fr 3fr;
+
+    grid-template-areas: 
+    "video price"
+    "video user"
+    "bottom-left bottom-right"
+    "bottom-left bottom-right-under";
+
 }
+.video{grid-area: video;}
+.price{grid-area: price; background-color: aqua;}
+.user{grid-area: user; background-color: coral;}
+.bottom-left{grid-area: bottom-left; background-color: cadetblue;}
+.bottom-right{grid-area: bottom-right; background-color: violet;}
+.bottom-right-under{grid-area: bottom-right-under; background-color: yellow;}
+
 .wrapper>.wrapper-top{
     /* width: 1200px; */
     position: relative;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
 }
 
 
@@ -23,11 +46,17 @@ body{
 .wrapper>.wrapper-top>.main{
     display: flex;
     position: relative;
+    justify-content: space-between;
+    align-items: center;
     background-color: orange;
+    color: #fff;
+    padding-top: 250px;
 }
 .wrapper>.wrapper-top>.main>.video{
     border: 1px solid;
-    
+    position: absolute;
+
+
 }
 .wrapper-top>.main>.price{
     width: 450px;
@@ -46,10 +75,11 @@ body{
 
 /* user */
 .wrapper-top>.user{
-    border: 1px solid;
+    border: 1px solid white;
     background-color: blue;
     width: 450px;
     height: 162px;
+    color: white;
     
     position: absolute;
     left: 62.5%;
@@ -139,6 +169,7 @@ body{
     background-color: green;
     width: 750px;
     height: 490px;
+    color: #fff;
     
     text-align: center;
    
@@ -149,14 +180,15 @@ body{
 
 /* bottom - right */
 .wrapper-top>.bottom-right{
-    border: 1px solid ;
+    border: 1px solid white;
     background-color: peru;
     width: 450px;
     height: 239px;
+    color: #fff;
     
     position: absolute;
-    left: 62.5%;
-    bottom:28%;
+    /* left: 62.5%;
+    bottom:28%; */
     display: flex;
     
     
@@ -188,15 +220,16 @@ body{
 
 /* bottom-under-right */
 .wrapper-top>.bottom-right-under{
-    border: 1px solid ;
+    border: 1px solid white;
     background-color: orchid;
     width: 450px;
     height: 172px;
     font-size: 30px;
+    color: #fff;
 
     position: absolute;
-    left: 62.5%;
-    bottom: .2%;
+    /* left: 62.5%;
+    bottom: .2%; */
 }
 .wrapper-top>.bottom-right-under>.img{
     text-align: center;

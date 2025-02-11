@@ -1,0 +1,38 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "video price"
+    "video user"
+    "bottom-left bottom-right"
+    "bottom-left bottom-right-under";
+
+}
+.video{grid-area: video;}
+.price{grid-area: price; background-color: aqua;}
+.user{grid-area: user; background-color: coral;}
+.bottom-left{grid-area: bottom-left; background-color: cadetblue;}
+.bottom-right{grid-area: bottom-right; background-color: violet;}
+.bottom-right-under{grid-area: bottom-right-under; background-color: yellow;}
+
+
+/* main */
+.wrapper{}
+.wrapper>.video{
+    
+}
+.wrapper>.price{}
+.wrapper>.price>.list{}
+.wrapper>.price>.btn{}
+.wrapper>.price>.pay-btn{}
+.wrapper>.user{}
+.wrapper>.user>.user.emoji{}
+.wrapper>.user>.user.chart{}
+.wrapper>.bottom-left{}
+.wrapper>.bottom-right{}
+.wrapper>.bottom-right>.right{}
+.wrapper>.bottom-right>.left{}
+.wrapper>.bottom-right>.slider{}
+.wrapper>.bottom-right-under{}
