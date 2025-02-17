@@ -4,7 +4,7 @@ a { text-decoration: none; }
 body{background-color: #181818; color: white;}
     
 
-.wrapper{
+/* .wrapper{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1fr);
@@ -22,7 +22,7 @@ body{background-color: #181818; color: white;}
 .user{grid-area: user;}
 .bottom-left{grid-area: bottom-left;}
 .bottom-right{grid-area: bottom-right;}
-.bottom-right-under{grid-area: bottom-right-under;}
+.bottom-right-under{grid-area: bottom-right-under;} */
 
 #headerContainer{
     height: 150px;
@@ -44,8 +44,12 @@ body{background-color: #181818; color: white;}
 /* wr-price */
 .wrapper>.price{
     width: 450px;
-    height: 220px;
+    height: 230px;
     border-bottom: 3px solid #CB863D;
+
+    position: absolute;
+    left: 62.5%;
+    top: 0;
 }
 /* wr-pr-list */
 .wrapper>.price>.list{
@@ -53,6 +57,8 @@ body{background-color: #181818; color: white;}
     height: 125px;
     padding-top: 10px;
     padding-left: 10px;
+
+    background-color: cornflowerblue;
 
 }
 .wrapper>.price>.list>span{ 
@@ -68,6 +74,8 @@ body{background-color: #181818; color: white;}
 }
 /* wr-pr-btn */
 .wrapper>.price>.btn{
+    
+    background-color: thistle;
     position: absolute;
     right: 1.9%;
     top: 1%;
@@ -99,13 +107,13 @@ body{background-color: #181818; color: white;}
 
 /* wr-pr-pay_btn */
 .wrapper>.price>.pay-btn{
+    background-color: slateblue;
     display: flex;
     width: 450px;
     justify-content: end;
 
     position: absolute;
-    right: 1px;
-    top: 14%;
+    margin-bottom: 5px;
 
   border-top: 3px solid #CB863D;  
 }
@@ -130,9 +138,13 @@ body{background-color: #181818; color: white;}
 }
 /* wr-user */
 .wrapper>.user{
+    background-color: salmon;
     width: 450px;
-    height: 167px;
-    
+    height: 170px;
+
+    position: absolute;
+    left: 62.5%;
+    top: 26%;
 }
 .wrapper>.user>.user-emoji{
     position: relative; 
@@ -179,6 +191,7 @@ body{background-color: #181818; color: white;}
     top: 28%;
 }
 .wrapper>.bottom-left{
+    background-color: darkseagreen;
     width: 750px;
     height: 491px;
     border-top: 3px solid #CB863D;
@@ -222,10 +235,14 @@ body{background-color: #181818; color: white;}
 
 
 .wrapper>.bottom-right{
+    background-color: mediumpurple;
     width: 450px;
-    height: 300px;
+    height: 315px;
     border-top: 3px solid #CB863D;
     
+    position: absolute;
+    left: 62.5%;
+    bottom: 19.3%;
 }
 .wrapper>.bottom-right>.right{
    display: flex;
@@ -246,109 +263,108 @@ body{background-color: #181818; color: white;}
     justify-content: center;
     align-items: center;
 }
+/* 슬라이드 구역 */
 
-/* .wrapper>.bottom-right>.slider{
-    position: relative;
+.slider-block {
     overflow: hidden;
-
     width: 450px;
-    height: 239px;
-    
+    height: 330px;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    border-top: 3px solid #CB863D;
 }
 
-.wrapper>.bottom-right>.slider>.img{
+.slider-wrapper {
     display: flex;
+    transition: transform 0.5s ease-in-out;   
+}
+.slider-wrapper>.item>p{
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.slider-wrapper .item {
+    width: 450px;
+    height: 250px;
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+}
+
+.slider-wrapper .show {
     position: absolute;
-    top: 20px;
-    left: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
 
-    animation: slider 7.5s infinite linear;
+    top: 60px;
+}
 
-} */
+.show.one {
+    background-image: url(../image/dlc1.jpg);
+    background-size: 450px 250px;
+}
+.show.two {
+    background-image: url(../image/dlc2.jpg);
+    background-size: 450px 250px;
+}
+.show.three {
+    background-image: url(../image/dlc3.jpg);
+    background-size: 450px 250px;
+}
 
-.bottom-right>.slider>input[id*="dlc"] {
+.prev, .next {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+
+    top: 15px;
+    right: 20px;
+}
+
+.prev {
+    padding-right: 50px;
+}
+.next {}
+
+input[type="radio"] {
     display: none;
 }
-.bottom-right>.slider>.img{
-    max-width: 450px;
-    height: 235px;
-    margin: 0 auto;
-    overflow: hidden;
+
+#slide1:checked ~ .slider-wrapper {
+    transform: translateX(0%);
 }
-.slider>.sliderlist{
-    white-space: nowrap;
-    font-size: 0;
+#slide2:checked ~ .slider-wrapper {
+    transform: translateX(-100%);
 }
-.slider>.sliderlist>li{
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    transition: all .7s;
-}
-.slider>.sliderlist>li>a{
-    display: block;
-    position: relative;
-}
-.slider>.sliderlist>li>a>img{
-    width: 100%;
-} 
-.slider>.slidelist>label{
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 50px;
-    cursor: pointer;
+#slide3:checked ~ .slider-wrapper {
+    transform: translateX(-200%);
 }
 
-.bottom-right>.right>.slider-btn>.l-left-btn {
-    background: url('./image/left.png') center center / 100% no-repeat;
-}
-.bottom-right>.right>.slider-btn>.l-right-btn {
-    background: url('image/right.png') center center / 100% no-repeat;
-}
-[id="dlc1"]:checked ~ .img .slidelist {transform: translateX(0); animation: dlc1 20s infinite;}
-[id="dlc2"]:checked ~ .img .slidelist {transform: translateX(0); animation: dlc2 20s infinite;}
-[id="dlc3"]:checked ~ .img .slidelist {transform: translateX(0); animation: dlc3 20s infinite;}
-[id="dlc4"]:checked ~ .img .slidelist {transform: translateX(0); animation: dlc4 20s infinite;}
-
-.bottom-right .slider [id="dlc1"] :checked ~ .img .slidelist > li {transform:translateX(0%);} 
-.bottom-right .slider [id="dlc2"] :checked ~ .img .slidelist > li {transform:translateX(-100%);} 
-.bottom-right .slider [id="dlc3"] :checked ~ .img .slidelist > li {transform:translateX(-200%);} 
-.bottom-right .slider [id="dlc4"] :checked ~ .img .slidelist > li {transform:translateX(-300%);} 
-
-.wrapper>.bottom-right>.slider>.img:nth-child(1){
-    background-image: url(image/dlc1.jpg);
-    animation-delay: 0;
-}
-.wrapper>.bottom-right>.slider>.img:nth-child(2){
-    background-image: url(image/dlc2.jpg);
-    animation-delay: -2.5s;
-}
-.wrapper>.bottom-right>.slider>.img:nth-child(3){
-    background-image: url(image/dlc3.jpg);
-    animation-delay: -5s;
-}
-.wrapper>.bottom-right>.slider>.img:nth-child(4){
-    background-image: url(image/dlc4.jpg);
-    animation-delay: -7.5s;
-}
 
 /* wr-bru */
 .wrapper>.bottom-right-under{
+    background-color: firebrick;
     width: 450px;
-    height: 172px;
-    font-size: 25px;
+    height: 175px;
+    font-size: 20px;
     font-weight: bold;
 
     border-top: 3px solid #CB863D;
 
-    position: relative;
-    align-items: center;
+    position: absolute;
+    /* align-items: center; */
+
+    left: 62.5%;
+    bottom: 0%;
+
 }
 .wrapper>.bottom-right-under>div{
     margin-top: 10px;
@@ -357,72 +373,5 @@ body{background-color: #181818; color: white;}
 .wrapper>.bottom-right-under>section>.image{
     display: flex;
     justify-content: space-between;
-    padding: 10px 8px 0 8px;
-}
-
-/* @keyframes slider {
-    0% {
-      transform: translateX(0);
-    }
-    13% {
-      transform: translateX(-100%);
-    }
-    26% {
-      transform: translateX(-200%);
-    }
-    49% {
-      transform: translateX(-300%);
-    }
-    80% {
-      transform: translateX(-400%);
-      animation-timing-function: step-end;
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  } */
-
-  @keyframes dlc1 {
-    0% {left: 0%;}
-    23% {left: 0%;} 
-    25% {left: -100%;}
-    48% {left: -100%;}
-    50% {left: -200%;}
-    73% {left: -200%;}
-    75% {left: -300%;}
-    98% {left: -300%;}
-    100% {left: 0%;}
-}
-@keyframes dlc2 {
-    0% {left: 0%;}
-    23% {left: 0%;} 
-    25% {left: -100%;}
-    48% {left: -100%;}
-    50% {left: -200%;}
-    73% {left: -200%;}
-    75% {left: 100%;}
-    98% {left: 100%;}
-    100% {left: 0%;}
-}
-@keyframes dlc3 {
-    0% {left: 0%;}
-    23% {left: 0%;} 
-    25% {left: -100%;}
-    48% {left: -100%;}
-    50% {left: -200%;}
-    73% {left: -200%;}
-    75% {left: 100%;}
-    98% {left: 100%;}
-    100% {left: 0%;}
-}
-@keyframes dlc4 {
-    0% {left: 0%;}
-    23% {left: 0%;} 
-    25% {left: -100%;}
-    48% {left: -100%;}
-    50% {left: -200%;}
-    73% {left: -200%;}
-    75% {left: 100%;}
-    98% {left: 100%;}
-    100% {left: 0%;}
+    padding: 8px 8px 0 8px;
 }

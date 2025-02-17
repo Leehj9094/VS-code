@@ -6,11 +6,12 @@
     <title>Document</title>
     <!-- link -->
     <script src="js/link.js" defer></script>
+    <script src="js/gamepay.js"></script>
 
-    <!-- css import -->
+    <!-- css import
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/gamepay.css">
+    <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/gamppay_copy.css">
 
 
     <!-- google icon -->
@@ -100,56 +101,41 @@
             </div>
         </section>   
         <section class="bottom-right">
-            <div class="right">
-                <li>DLC</li>
-                <div class="slider-btn">
-                    <div class="l-left-btn">
-                        <span><img src="image/back.png" width="30px" height="30px"></span>
-                        <span class="left-btn"></span>
+            <div class="slider-block">
+                <input type="radio" id="slide1" name="slideradio" checked>
+                <input type="radio" id="slide2" name="slideradio">
+                <input type="radio" id="slide3" name="slideradio">
+                <div class="slider-wrapper">
+                    <div class="item">
+                        <p>DLC</p>
+                        <label for="slide3" class="prev">
+                            <span class="material-symbols-outlined">arrow_back_ios</span>
+                        </label>
+                        <label for="slide2" class="next">
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </label>
+                        <div class="show one"></div>
                     </div>
-                    <div class="l-right-btn">
-                        <span><img src="image/next.png" width="30px" height="30px"></span>
-                        <div class="right-btn"></div>
+                    <div class="item">
+                        <p>DLC</p>
+                        <label for="slide1" class="prev">
+                            <span class="material-symbols-outlined">arrow_back_ios</span>
+                        </label>
+                        <label for="slide3" class="next">
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </label>
+                        <div class="show two"></div>
                     </div>
-                </div>
-            </div>                        
-            <div class="slider">
-                <input type="radio" id="dlc1" name="slide" checked>
-                <input type="radio" id="dlc2" name="slide">
-                <input type="radio" id="dlc3" name="slide">
-                <input type="radio" id="dlc4" name="slide">
-                
-                <div class="img">
-                    <ul class="slidelist">
-                        <li>
-                            <div>
-                                <label for="dlc4" class="left"></label>
-                                <a href="" src="./image/dlc1.jpg" width="450px" height="235px"></a>
-                                <label for="dlc2" class="right"></label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label for="dlc1" class="left"></label>
-                                <a href="" src="./image/dlc2.jpg" width="450px" height="235px"></a>
-                                <label for="dlc3" class="right"></label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label for="dlc2" class="left"></label>
-                                <a href="" src="./image/dlc3.jpg" width="450px" height="235px"></a>
-                                <label for="dlc4" class="right"></label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label for="dlc3" class="left"></label>
-                                <a href="" src="./image/dlc4.jpg" width="450px" height="235px"></a>
-                                <label for="dlc1" class="right"></label>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="item">
+                        <p>DLC</p>
+                        <label for="slide2" class="prev">
+                            <span class="material-symbols-outlined">arrow_back_ios</span>
+                        </label>
+                        <label for="slide1" class="next">
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </label>
+                        <div class="show three"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -165,8 +151,10 @@
                 </section>
         </section>
     </div>
+
     <footer id="footerContainer">
         
     </footer>
+
 </body>
 </html>
