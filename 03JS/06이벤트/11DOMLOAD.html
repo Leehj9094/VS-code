@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            border: 1px solid;
+            min-height: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;right: 0;
+            top: 0;bottom: 0;
+            margin: auto;
+            transition: .8s;
+        }
+        .ball-1280px{
+            width: 300px;
+            height: 300px;
+            border: 5px solid;
+            background-color: rgb(98, 224, 98);
+        }
+        .ball-768px{
+            width: 150px;
+            height: 150px;
+            border: 5px solid;
+            background-color: rgb(108, 110, 233);
+        }
+        .ball-480px{
+            width: 50px;
+            height: 50px;
+            border: 5px solid;
+            background-color: rgb(218, 221, 72);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="ball ball-1280px"></div>
+
+    <script>
+        //------------------------------------------------------
+        //Load이벤트
+        //------------------------------------------------------
+        //DOMContentLoaded  : 최초 1회 로드 시 동작 (HTML이 전부 파생된 이후 DOM객체가 완성되고 나서 실행,css,외부파일 로드여부와는 관계없음)
+        //load              : 최초 document 로드 시 1회 동작 ()(모든 리소스가 완전히 로드된 이후 실행)
+        window.addEventListener('DOMContentLoaded',()=>{
+
+            // 반응처리함수
+            const flexibleBall = (width,ballEl)=>{
+                 if(width<768) {
+                //모바일 처리
+                ballEl.className='ball ball-480px';
+                } else if(width<1280){
+                // 태블릿 처리
+                ballEl.className='ball ball-768px';
+                } else{
+                //데스크탑 처리
+                ballEl.className='ball ball-1280px';
+                }
+            }
+
+            const width = window.innerWidth;
+            const ballEl = document.querySelector('.ball');
+            flexibleBall(width,ballEl);
+
+
+            window.addEventListener('resize',()=>{
+                const width = window.innerWidth;
+                const ballEl = document.querySelector('.ball');
+                flexibleBall(width,ballEl);
+            })
+        })
+
+
+        
+    </script>
+</body>
+</html>
