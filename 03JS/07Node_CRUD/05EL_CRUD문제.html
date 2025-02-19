@@ -46,7 +46,14 @@
         {
             width : 700px;
         }
-
+        td.delete{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        td.delete>span{
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -89,45 +96,55 @@
         const addressEl = formEl.address;
         const tableBodyEl = document.querySelector('table tbody');
 
-        document.addEventListener('DOMContentLoaded'),()=>{
-            // 요소 검색
-            const joinFormEl = document.querySelector('.joinForm');
-            const btnEl = document.querySelector('.btn');
-            const tableBodyEl = document.querySelector('.table tbody');
-        }
-
-        function createNode(text){
+        //이벤트
+        btnEl.addEventListener('click',()=>{
+            const name = usernameEl.value;
+            const age = ageEl.value;
+            const address = addressEl.value;
+            createNode({"name":name,"age":age,"address";address});
+            usernameEl.value="";
+            ageEl.value="";
+            addressEl.value="";
+        })
+        
+        const createNode = (profile) => {
             // 유효성 검사
-            if(!isValid(text)){
-                alert('입력하세요.');
+            if(!isValid(profile))
                 return ;
-            }
+            
         // 노드생성
-        const formEl = document.createElement('div');
-        const usernameEl = document.createElement('div');
-        const ageEl = document.createElement('div');
-        const addressEl = document.createElement('div');
-        const deleteEl = document.createElement('span');
-        deleteEl.classList.add('material-symbols-outlined');
-        deleteEl.innerHTML='delete';
+        const trEl = document.createElement('tr');
+        const usernameEl = document.createElement('td');
+        const ageEl = document.createElement('td');
+        const addressEl = document.createElement('td');
+        const deleteEl = document.createElement('td');
+
+        const deleteIconEl = document.createElement('span');
+        deleteIconEl.classList.add('material-symbols-outlined');
+        deleteIconEl.innerHTML='delete';
 
         // 데이터 처리
-        usernameEl.innerHTML=text;
-        ageEl.innerHTML=text;
-        addressEl.innerHTML=text; 
+        usernameEl.innerHTML=profile.name;
+        ageEl.innerHTML=profile.age;
+        addressEl.innerHTML=profile.address; 
 
         // 스타일링 추가(class)
-        trEl.classList.add('input');
+        trEl.classList.add('item');
         usernameEl.classList.add('username');
         ageEl.classList.add('age');
         addressEl.classList.add('address');
+        deleteEl.classList.add('delete');
+
+        // 이벤트 삭제
+        deleteIconEl.addEventListener('click',deleteNode);
 
         // 노드 연결
-
-        formEl.appendChild(usernameEl);
-        formEl.appendChild(ageEl);
-        formEl.appendChild(addressEl);
-        tableBodyEl.appendChild(formEl);
+        deleteEl.appendChild(deleteIconEl);
+        trEl.appendChild(usernameEl);
+        trEl.appendChild(ageEl);
+        trEl.appendChild(addressEl);
+        trEl.appendChild(deleteEl);
+        tableBodyEl.appendChild(trEl);
         }
         
         function deleteNode(btn){
@@ -138,7 +155,7 @@
         }
 
         function isValid(profile){
-            console.log('typeof')
+            console.log('typeof',profile)
             if(profile===undifined || profile===null){
                 alert("사용자 정보를 입력하세요")
                 return false;
