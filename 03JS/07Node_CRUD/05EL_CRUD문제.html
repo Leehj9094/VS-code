@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- GOOGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        *{
+            font-size: 1rem;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24;
+          font-size:1.5rem;
+        }
+        input{
+            height : 35px;
+        }
+        .btn{
+            width : 75px;
+            height : 35px;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        th,td{
+            width:50px;
+            height : 35px;
+            border : 1px solid;
+            margin : 2px;
+        }
+        th:nth-child(1),
+        td:nth-child(1)
+        {
+            width : 150px;
+        }
+        th:nth-child(3),
+        td:nth-child(3)
+        {
+            width : 700px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="" name="joinForm" onsubmit="return false">
+        <input name="username" placeholder="이름을 입력하세요" >
+        <input name="age"  placeholder="나이를 입력하세요">
+        <input name="address" placeholder="주소를 입력하세요">
+        <button class="btn">입력</button>
+    </form>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+                <th>삭제</th>
+            </tr>   
+        </thead>
+        <tbody>
+            
+        </tbody>
+        
+    </table>
+
+    </div>
+    <script>
+        // form의 기본기능은 비활성화합니다
+        //입력버튼을 눌렀을때 table의 tbody에 입력된 (이름/나이/주소/삭제버튼)이 생성될수 있도록합니다
+        //입력된 노드의 이름/나이/주소를 수정할수 있도록합니다.
+        //특정행의 삭제버튼을 클릭했을때 해당 행이 삭제 될수 있도록 합니다.
+        
+        //특정행의 위치를 위로이동/아래로 이동이 가능하도록 합니다(나중에)
+
+        const btnEl = document.querySelector('.btn');
+        const formEl = document.joinForm;
+        const usernameEl = formEl.username;
+        const ageEl = formEl.age;
+        const addressEl = formEl.address;
+        const tableBodyEl = document.querySelector('table tbody');
+
+        document.addEventListener('DOMContentLoaded'),()=>{
+            // 요소 검색
+            const joinFormEl = document.querySelector('.joinForm');
+            const btnEl = document.querySelector('.btn');
+            const tableBodyEl = document.querySelector('.table tbody');
+        }
+
+        function createNode(text){
+            // 유효성 검사
+            if(!isValid(text)){
+                alert('입력하세요.');
+                return ;
+            }
+        // 노드생성
+        const formEl = document.createElement('div');
+        const usernameEl = document.createElement('div');
+        const ageEl = document.createElement('div');
+        const addressEl = document.createElement('div');
+        const deleteEl = document.createElement('span');
+        deleteEl.classList.add('material-symbols-outlined');
+        deleteEl.innerHTML='delete';
+
+        // 데이터 처리
+        usernameEl.innerHTML=text;
+        ageEl.innerHTML=text;
+        addressEl.innerHTML=text; 
+
+        // 스타일링 추가(class)
+        trEl.classList.add('input');
+        usernameEl.classList.add('username');
+        ageEl.classList.add('age');
+        addressEl.classList.add('address');
+
+        // 노드 연결
+
+        formEl.appendChild(usernameEl);
+        formEl.appendChild(ageEl);
+        formEl.appendChild(addressEl);
+        tableBodyEl.appendChild(formEl);
+        }
+        
+        function deleteNode(btn){
+            const itemEl = e.btn.parentNode.parentNode;
+                    console.log('delete target item..',itemEl);
+                    itemEl.remove()
+
+        }
+
+        function isValid(profile){
+            console.log('typeof')
+            if(profile===undifined || profile===null){
+                alert("사용자 정보를 입력하세요")
+                return false;
+            }
+            if(profile.name.trim()===""){
+                alert("이름을 입력하세요")
+                return false;
+            }
+            if(profile.name.trim()===""){
+                alert("나이를 입력하세요")
+                return false;
+            }
+            if(profile.name.trim()===""){
+                alert("주소를 입력하세요")
+                return false;
+            }
+        }return true;
+
+    </script>
+</body>
+</html>
